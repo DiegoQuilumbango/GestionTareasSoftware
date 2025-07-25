@@ -49,26 +49,7 @@
         },
         {
           "DockedWidth": 225,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
-              "RelativeDocumentMoniker": "GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
-              "RelativeToolTip": "GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADsAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-25T17:28:31.877Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 95,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -81,6 +62,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
+              "RelativeDocumentMoniker": "GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
+              "RelativeToolTip": "GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-25T17:28:31.877Z",
+              "EditorCaption": ""
             }
           ]
         }

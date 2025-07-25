@@ -114,5 +114,37 @@ namespace GestionTareasWeb.Controllers
                 return View();
             }
         }
+
+        [HttpGet]
+        public IActionResult Reporte(string estado = null, int? prioridad = null, DateTime? fechaVencimiento = null, string ordenarPor = "FechaCreacion", bool ascendente = true)
+        {
+            // Crear la consulta base
+            var query = "SELECT * FROM Tarea WHERE 1=1";
+
+            // Agregar filtros según los parámetros proporcionados
+            if (!string.IsNullOrEmpty(estado))
+            {
+                query += " AND Estado = @Estado";
+            }
+            if (prioridad.HasValue)
+            {
+                query += " AND Prioridad = @Prioridad";
+            }
+            if (fechaVencimiento.HasValue)
+            {
+                query += " AND FechaVencimiento = @FechaVencimiento";
+            }
+
+            // Ordenar por el campo seleccionado
+            query += $" ORDER BY {ordenarPor} {(ascendente ? "ASC" : "DESC")}";
+
+            // Ejecutar la consulta
+            var tareas = _connection.Query<Modelo.Software.Tarea>(query, new { Estado = estado, Prioridad = prioridad, FechaVencimiento = fechaVencimiento }).ToList();
+
+            return View(tareas);
+        }
+
+        osea un controlador simple para una vista que va a mostrar tres tablas una conn con cada una de las prioridades
+
     }
 }

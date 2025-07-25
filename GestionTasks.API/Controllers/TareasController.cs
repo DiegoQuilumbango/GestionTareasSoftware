@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using Modelo.Software;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -46,6 +47,8 @@ namespace GestionTasks.API.Controllers
             return tareas;
         }
 
+
+
         // GET api/Tarea/5
         [HttpGet("{id}")]
         public Modelo.Software.Tarea Get(int id)
@@ -62,6 +65,36 @@ namespace GestionTasks.API.Controllers
             tarea.Usuario = usuario;
 
             return tarea;
+        }
+
+        [HttpGet("{id}")]
+        public Modelo.Software.Tarea GetPrioridad(int id)
+        {
+            var tarea = connection.QuerySingle<Modelo.Software.Tarea>("SELECT * FROM Tarea WHERE Id = @Id", new { Id = id });
+
+            var proyecto = connection.QuerySingleOrDefault<Modelo.Software.Proyecto>(
+                "SELECT * FROM Proyecto WHERE Id = @Id", new { Id = tarea.ProyectoId });
+
+            var usuario = connection.QuerySingleOrDefault<Modelo.Software.Usuario>(
+                "SELECT * FROM Usuario WHERE Id = @Id", new { Id = tarea.UsuarioId });
+
+            tarea.Proyecto = proyecto;
+            tarea.Usuario = usuario;
+
+            return tarea;
+        }
+        // GET: api/TareaApi/{id}
+        [HttpGet("prioridad/{prioridad}")]
+        public IActionResult GetByPrioridad(int prioridad)
+        {
+            var tarea = connection.QuerySingleOrDefault<Tarea>("SELECT * FROM Tarea WHERE prioridad = @prioridad", new { prioridad = prioridad });
+
+            if (tarea == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(tarea);
         }
 
         [HttpGet("proyecto/{id}")]
