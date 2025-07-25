@@ -1,42 +1,82 @@
 ﻿@model Modelo.Software.Proyecto
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles del Proyecto";
 }
 
-<h1>Details</h1>
+<h1>@ViewData["Title"]</h1>
 
+<!-- Información del Proyecto -->
 <div>
     <h4>Proyecto</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nombre)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Descripcion)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Descripcion)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.FechaCreacion)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.FechaCreacion)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.FechaModificacion)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.FechaModificacion)
         </dd>
     </dl>
 </div>
+
+<!-- Tabla de Tareas Asociadas -->
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <h4>Tareas Asociadas al Proyecto</h4>
+    @if (ViewBag.Tareas != null)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                    <th>Descripcion</th>
+                    <th>Prioridad</th>
+                    <th>Fecha de Creacion</th>
+                    <th>Fecha de Modificacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var tarea in ViewBag.Tareas)
+                {
+                    <tr>
+                        <td>@tarea.Nombre</td>
+                        <td>@tarea.Estado</td>
+                        <td>@tarea.Descripcion</td>
+                        <td>@tarea.prioridad</td>
+                        <td>@tarea.FechaCreacion.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@tarea.FechaModificacion.ToString("dd/MM/yyyy HH:mm")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No hay tareas asociadas a este proyecto.</p>
+    }
+</div>
+
+<!-- Enlaces de Navegación -->
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar Proyecto</a> |
+    <a asp-action="Index">Volver a la Lista</a>
 </div>

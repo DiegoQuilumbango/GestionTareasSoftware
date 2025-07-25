@@ -64,10 +64,29 @@ namespace GestionTasks.API.Controllers
             return tarea;
         }
 
+        [HttpGet("proyecto/{id}")]
+        public Modelo.Software.Proyecto GetTareasByProyecto(int id)
+        {
+            var proyecto = connection.QuerySingle<Modelo.Software.Proyecto>(
+                "SELECT * FROM Proyecto WHERE Id = @Id",
+                new { Id = id });
+
+            var tareas = connection.Query<Modelo.Software.Tarea>(
+                "SELECT * FROM Tarea WHERE ProyectoId = @Id",
+                new { Id = id }).ToList();
+
+            proyecto.Tareas = tareas;
+
+            return proyecto;
+        }
+
         // POST api/Tarea
         [HttpPost]
         public Modelo.Software.Tarea Post([FromBody] Modelo.Software.Tarea tarea)
         {
+            // Asignar el estado 'Pendiente' antes de insertar
+            tarea.Estado = "Pendiente";
+
             connection.Execute("INSERT INTO Tarea (Nombre, Descripcion, Estado, prioridad, ProyectoId, UsuarioId, FechaCreacion, FechaModificacion) VALUES (@Nombre, @Descripcion, @Estado, @prioridad, @ProyectoId, @UsuarioId, @FechaCreacion, @FechaModificacion)", tarea);
             return tarea;
         }

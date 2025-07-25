@@ -7,151 +7,121 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GestionTareasWeb.Data;
 using Modelo.Software;
+using Client;
 
 namespace GestionTareasWeb.Controllers
 {
     public class ProyectosController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IConfiguration _configuration;
 
-        public ProyectosController(ApplicationDbContext context)
+        public ProyectosController(IConfiguration configuration)
         {
-            _context = context;
+            _configuration = configuration;
         }
-
         // GET: Proyectos
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Proyecto.ToListAsync());
+            var proyectos = Crud<Proyecto>.GetAll();
+            return View(proyectos);
         }
 
         // GET: Proyectos/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var proyecto = await _context.Proyecto
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var proyecto = Crud<Proyecto>.GetById(id);
             if (proyecto == null)
             {
                 return NotFound();
             }
+            ViewBag.Tareas = GetTareas();
 
             return View(proyecto);
         }
 
-        // GET: Proyectos/Create
+        private List<Tarea> GetTareas()
+        {
+            // Obtener todas las tareas sincrónicamente
+            var tareas = Crud<Tarea>.GetAll();
+            return tareas;
+        }
+
+
+        // GET: Usuarios/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Proyectos/Create
+        // POST: Usuarios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Descripcion,FechaCreacion,FechaModificacion")] Proyecto proyecto)
+        public ActionResult Create(Proyecto data)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(proyecto);
-                await _context.SaveChangesAsync();
+                Crud<Proyecto>.Create(data);
                 return RedirectToAction(nameof(Index));
             }
-            return View(proyecto);
+            catch
+            {
+                return View();
+            }
         }
 
-        // GET: Proyectos/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: Usuarios/Edit/5
+        public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var proyecto = await _context.Proyecto.FindAsync(id);
-            if (proyecto == null)
-            {
-                return NotFound();
-            }
-            return View(proyecto);
+            var data = Crud<Proyecto>.GetById(id);
+            return View(data);
         }
 
-        // POST: Proyectos/Edit/5
+        // POST: Usuarios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Descripcion,FechaCreacion,FechaModificacion")] Proyecto proyecto)
+        public ActionResult Edit(int id, Proyecto data)
         {
-            if (id != proyecto.Id)
+            if (id != data.Id)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            try
             {
-                try
-                {
-                    _context.Update(proyecto);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ProyectoExists(proyecto.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                Crud<Proyecto>.Update(id, data); // aquí se llama al método que hará el PUT
                 return RedirectToAction(nameof(Index));
             }
-            return View(proyecto);
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return View(data);
+            }
         }
 
-        // GET: Proyectos/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public ActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var proyecto = await _context.Proyecto
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (proyecto == null)
-            {
-                return NotFound();
-            }
-
-            return View(proyecto);
+            var data = Crud<Proyecto>.GetById(id);
+            return View();
         }
 
-        // POST: Proyectos/Delete/5
-        [HttpPost, ActionName("Delete")]
+        // POST: PaisVController/Delete/5
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public ActionResult Delete(int id, Proyecto data)
         {
-            var proyecto = await _context.Proyecto.FindAsync(id);
-            if (proyecto != null)
+            try
             {
-                _context.Proyecto.Remove(proyecto);
+                Crud<Proyecto>.Delete(id);
+                return RedirectToAction(nameof(Index));
             }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool ProyectoExists(int id)
-        {
-            return _context.Proyecto.Any(e => e.Id == id);
+            catch
+            {
+                return View();
+            }
         }
     }
 }

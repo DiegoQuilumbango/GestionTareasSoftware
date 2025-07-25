@@ -10,3 +10,4 @@ C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\obj\Debug\net8
 C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\obj\Debug\net8.0\refint\Client.dll
 C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\obj\Debug\net8.0\Client.pdb
 C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\obj\Debug\net8.0\ref\Client.dll
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\obj\Debug\net8.0\Client.sourcelink.json

@@ -375,6 +375,46 @@
         }
       }
     },
+    "/api/Tarea/proyecto/{id}": {
+      "get": {
+        "tags": [
+          "Tarea"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Proyecto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Proyecto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Proyecto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Usuario": {
       "get": {
         "tags": [

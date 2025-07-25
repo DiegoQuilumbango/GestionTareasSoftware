@@ -242,6 +242,32 @@
     ]
   },
   {
+    "ContainingType": "GestionTasks.API.Controllers.TareaController",
+    "Method": "GetTareasByProyecto",
+    "RelativePath": "api/Tarea/proyecto/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelo.Software.Proyecto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GestionTasks.API.Controllers.UsuarioController",
     "Method": "Get",
     "RelativePath": "api/Usuario",

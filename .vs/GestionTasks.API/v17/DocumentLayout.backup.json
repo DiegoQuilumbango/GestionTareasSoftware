@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|c:\\users\\asus\\desktop\\utn\\repasos\\repaso2\\gestiontasks.api\\gestiontareasweb\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|solutionrelative:gestiontareasweb\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|c:\\users\\asus\\desktop\\utn\\repasos\\repaso2\\gestiontasks.api\\gestiontareasweb\\views\\proyectos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|solutionrelative:gestiontareasweb\\views\\proyectos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|c:\\users\\asus\\desktop\\utn\\repasos\\repaso2\\gestiontasks.api\\gestiontareasweb\\controllers\\proyectoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|solutionrelative:gestiontareasweb\\controllers\\proyectoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|c:\\users\\asus\\desktop\\utn\\repasos\\repaso2\\gestiontasks.api\\gestiontareasweb\\controllers\\tareascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|solutionrelative:gestiontareasweb\\controllers\\tareascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20D1BADB-B36D-4427-B809-1CC24FD7918B}|Modelo.Software\\Modelo.Software.csproj|c:\\users\\asus\\desktop\\utn\\repasos\\repaso2\\gestiontasks.api\\modelo.software\\tarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20D1BADB-B36D-4427-B809-1CC24FD7918B}|Modelo.Software\\Modelo.Software.csproj|solutionrelative:modelo.software\\tarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,41 +34,34 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "GestionTareasWeb\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "GestionTareasWeb\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:27:04.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProyectosController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\ProyectosController.cs",
-              "RelativeDocumentMoniker": "GestionTareasWeb\\Controllers\\ProyectosController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\ProyectosController.cs",
-              "RelativeToolTip": "GestionTareasWeb\\Controllers\\ProyectosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Tarea.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\Modelo.Software\\Tarea.cs",
+              "RelativeDocumentMoniker": "Modelo.Software\\Tarea.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\Modelo.Software\\Tarea.cs",
+              "RelativeToolTip": "Modelo.Software\\Tarea.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:26:25.834Z",
+              "WhenOpened": "2025-07-25T17:26:47.223Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 225,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TareasController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\TareasController.cs",
-              "RelativeDocumentMoniker": "GestionTareasWeb\\Controllers\\TareasController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\TareasController.cs",
-              "RelativeToolTip": "GestionTareasWeb\\Controllers\\TareasController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T15:25:15.204Z",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
+              "RelativeDocumentMoniker": "GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
+              "RelativeToolTip": "GestionTareasWeb\\Views\\Proyectos\\Details.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-25T17:28:31.877Z",
               "EditorCaption": ""
             }
           ]

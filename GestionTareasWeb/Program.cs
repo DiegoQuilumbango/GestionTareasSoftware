@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Modelo.Software;
 using System.Security.Cryptography.Xml;
 
-Crud<Usuario>.EndPoint = "https://localhost:7185/api/Proyecto";
-Crud<Proyecto>.EndPoint = "https://localhost:7185/api/Tarea";
-Crud<Tarea>.EndPoint = "https://localhost:7185/api/Usuario";
+Crud<Usuario>.EndPoint = "https://localhost:7185/api/Usuario";
+Crud<Proyecto>.EndPoint = "https://localhost:7185/api/Proyecto";
+Crud<Tarea>.EndPoint = "https://localhost:7185/api/Tarea";
 
 var builder = WebApplication.CreateBuilder(args);
 

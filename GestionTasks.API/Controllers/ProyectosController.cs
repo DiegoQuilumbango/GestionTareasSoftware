@@ -46,7 +46,7 @@ namespace GestionTasks.API.Controllers
             var tareas = connection.Query<Modelo.Software.Tarea>("SELECT * FROM Tarea").ToList();
             proyecto.Tareas = tareas.Where(t => t.ProyectoId == proyecto.Id).ToList();
             return proyecto;
-        }
+        }        
 
         // POST api/Proyecto
         [HttpPost]
