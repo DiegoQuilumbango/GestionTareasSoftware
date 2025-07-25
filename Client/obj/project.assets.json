@@ -77,6 +77,16 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "Modelo.Software/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Modelo.Software.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modelo.Software.dll": {}
+        }
       }
     }
   },
@@ -234,11 +244,17 @@
         "newtonsoft.json.bson.1.0.2.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
       ]
+    },
+    "Modelo.Software/1.0.0": {
+      "type": "project",
+      "path": "../Modelo.Software/Modelo.Software.csproj",
+      "msbuildProject": "../Modelo.Software/Modelo.Software.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 8.0.15",
+      "Modelo.Software >= 1.0.0",
       "newtonsoft.json >= 13.0.3"
     ]
   },
@@ -274,7 +290,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\Modelo.Software\\Modelo.Software.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\Modelo.Software\\Modelo.Software.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

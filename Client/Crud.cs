@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
+using System.Reflection;
 using System.Text;
+using Modelo.Software;
 
 namespace Client
 {
@@ -76,6 +78,28 @@ namespace Client
                 }
             }
         }
+
+        public static List<T> GetBy2(string campo, string termino)
+        {
+            string url = $"{EndPoint}/{campo}/{termino}";
+            var client = new HttpClient();
+            var response = client.GetAsync(url).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                string json = response.Content.ReadAsStringAsync().Result;
+                if (campo == "Nombre")
+                {
+                    var proyecto = JsonConvert.DeserializeObject<Modelo.Software.Proyecto>(json);
+                    return new List<T> { (T)(object)proyecto };                }
+
+                // Si esperas una lista de objetos, deserializa como lista
+                return JsonConvert.DeserializeObject<List<T>>(json);
+            }
+
+            throw new Exception($"Error: {response.StatusCode}");
+        }
+
 
         public static T Create(T item)
         {

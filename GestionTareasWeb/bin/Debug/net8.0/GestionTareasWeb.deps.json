@@ -1995,6 +1995,7 @@
       "Client/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.15",
+          "Modelo.Software": "1.0.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {

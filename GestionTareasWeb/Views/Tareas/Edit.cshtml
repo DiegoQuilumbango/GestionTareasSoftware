@@ -2,6 +2,13 @@
 
 @{
     ViewData["Title"] = "Edit";
+    ViewBag.Niveles = new List<int> {
+        1,2,3
+    };
+    ViewBag.Estado = new List<string> {
+        "Pendiente","En Progreso","Terminado"
+    };
+
 }
 
 <h1>Edit</h1>
@@ -24,34 +31,22 @@
                 <span asp-validation-for="Descripcion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FechaCreacion" class="control-label"></label>
-                <input asp-for="FechaCreacion" class="form-control" />
-                <span asp-validation-for="FechaCreacion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FechaModificacion" class="control-label"></label>
-                <input asp-for="FechaModificacion" class="form-control" />
-                <span asp-validation-for="FechaModificacion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Estado" class="control-label"></label>
-                <input asp-for="Estado" class="form-control" />
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="prioridad" class="control-label"></label>
-                <input asp-for="prioridad" class="form-control" />
                 <span asp-validation-for="prioridad" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ProyectoId" class="control-label"></label>
-                <select asp-for="ProyectoId" class="form-control" asp-items="ViewBag.ProyectoId"></select>
-                <span asp-validation-for="ProyectoId" class="text-danger"></span>
+                <label asp-for="Proyecto" class="control-label"></label>
+                <select asp-for="Proyecto.Nombre" class="form-control" asp-items="ViewBag.Proyectos"></select>
+                <span asp-validation-for="Proyecto.Nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="UsuarioId" class="control-label"></label>
-                <select asp-for="UsuarioId" class="form-control" asp-items="ViewBag.UsuarioId"></select>
-                <span asp-validation-for="UsuarioId" class="text-danger"></span>
+                <label asp-for="Usuario" class="control-label"></label>
+                <select asp-for="Usuario.Nombre" class="form-control" asp-items="ViewBag.Usuarios"></select>
+                <span asp-validation-for="Usuario.Nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

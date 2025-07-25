@@ -45,6 +45,26 @@ namespace GestionTareasWeb.Controllers
             return View();
         }
 
+        private List<SelectListItem> GetProyectos()
+        {
+            var proyectos = Crud<Proyecto>.GetAll();
+            return proyectos.Select(p => new SelectListItem
+            {
+                Value = p.Id.ToString(),
+                Text = p.Nombre
+            }).ToList();
+        }
+
+        private List<SelectListItem> GetUsuarios()
+        {
+            var usuarios = Crud<Usuario>.GetAll();
+            return usuarios.Select(p => new SelectListItem
+            {
+                Value = p.Id.ToString(),
+                Text = p.Nombre
+            }).ToList();
+        }
+
         // GET: Tareas/TareasPorPrioridad
         //GET: Tareas/TareasPorPrioridad
         public async Task<IActionResult> TareasPorPrioridad()
@@ -131,6 +151,8 @@ namespace GestionTareasWeb.Controllers
         public ActionResult Edit(int id)
         {
             var data = Crud<Tarea>.GetById(id);
+            ViewBag.Proyectos = GetProyectos();
+            ViewBag.Usuarios = GetUsuarios();
             return View(data);
         }
 
@@ -183,29 +205,12 @@ namespace GestionTareasWeb.Controllers
         // GET: Tareas/BuscarProyecto
         public async Task<IActionResult> BuscarTareasPorProyecto(string nombreProyecto)
         {
-            if (string.IsNullOrEmpty(nombreProyecto))
-            {
-                ViewBag.Message = "Por favor, ingresa un nombre de proyecto.";
-                return View("Index");
-            }
+            var tareas = Crud<Modelo.Software.Tarea>.GetBy("proyectoNombre", nombreProyecto);
 
-            // Buscar el proyecto por nombre
-            var proyecto = Crud<Modelo.Software.Proyecto>.GetBy("Nombre", nombreProyecto).FirstOrDefault();
-
-            // Si no se encuentra el proyecto, mostrar mensaje
-            if (proyecto == null)
-            {
-                ViewBag.Message = "No se encontró ningún proyecto con ese nombre.";
-                return View("Index");
-            }
-
-            // Obtener las tareas asociadas a ese proyecto
-            var tareas = Crud<Modelo.Software.Tarea>.GetBy("proyecto", proyecto.Id);
-
-            // Pasar las tareas a la vista
             ViewBag.Tareas = tareas;
 
             return View("ResultadosTareas");
         }
+
     }
 }

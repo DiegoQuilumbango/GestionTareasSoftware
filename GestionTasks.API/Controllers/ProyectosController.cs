@@ -48,7 +48,7 @@ namespace GestionTasks.API.Controllers
             return proyecto;
         }
 
-        [HttpGet("Nombre/{nombre}")]
+        [HttpGet("Nombre1/{nombre}")]
         public IActionResult GetByNombre(string nombre)
         {
             var proyecto = connection.QuerySingleOrDefault<Modelo.Software.Proyecto>(
@@ -59,6 +59,14 @@ namespace GestionTasks.API.Controllers
 
             proyecto.Tareas = tareas;
 
+            return Ok(tareas);
+        }
+
+        [HttpGet("Nombre/{nombre}")]
+        public IActionResult GetByNombreProyecto(string nombre)
+        {
+            var proyecto = connection.QuerySingleOrDefault<Modelo.Software.Proyecto>(
+                "SELECT * FROM Proyecto WHERE Nombre = @Nombre", new { Nombre = nombre });
             return Ok(proyecto);
         }
 

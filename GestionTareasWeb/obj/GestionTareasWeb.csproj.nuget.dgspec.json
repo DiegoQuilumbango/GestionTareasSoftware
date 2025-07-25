@@ -32,7 +32,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\Modelo.Software\\Modelo.Software.csproj": {
+                "projectPath": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\Modelo.Software\\Modelo.Software.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

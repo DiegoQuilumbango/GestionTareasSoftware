@@ -190,6 +190,28 @@
         }
       }
     },
+    "/api/Proyecto/Nombre1/{nombre}": {
+      "get": {
+        "tags": [
+          "Proyecto"
+        ],
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Proyecto/Nombre/{nombre}": {
       "get": {
         "tags": [
@@ -478,6 +500,29 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Tarea/proyecto1/{id}": {
+      "get": {
+        "tags": [
+          "Tarea"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }

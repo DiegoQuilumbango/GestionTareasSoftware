@@ -11,3 +11,6 @@ C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\obj\Debug\net8
 C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\obj\Debug\net8.0\Client.pdb
 C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\obj\Debug\net8.0\ref\Client.dll
 C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\obj\Debug\net8.0\Client.sourcelink.json
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\bin\Debug\net8.0\Modelo.Software.dll
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\bin\Debug\net8.0\Modelo.Software.pdb
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Client\obj\Debug\net8.0\Client.csproj.Up2Date

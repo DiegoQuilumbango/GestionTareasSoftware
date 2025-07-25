@@ -2886,6 +2886,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.15",
+          "Modelo.Software": "1.0.0",
           "newtonsoft.json": "13.0.3"
         },
         "compile": {

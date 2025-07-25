@@ -109,6 +109,20 @@ namespace GestionTasks.API.Controllers
             return proyecto;
         }
 
+        [HttpGet("proyecto1/{id}")]
+        public IActionResult GetTareasByProyectoId(int id)
+        {
+            var proyecto = connection.QuerySingleOrDefault<Modelo.Software.Proyecto>(
+                "SELECT * FROM Proyecto WHERE Id = @Id",
+                new { Id = id });
+
+            var tareas = connection.Query<Modelo.Software.Tarea>(
+                "SELECT * FROM Tarea WHERE ProyectoId = @Id",
+                new { ProyectoId = proyecto.Id }).ToList();
+
+            return Ok(tareas);
+        }
+
         [HttpGet("proyectoNombre/{nombreProyecto}")]
         public IActionResult GetTareasByProyectoName(string nombreProyecto)
         {

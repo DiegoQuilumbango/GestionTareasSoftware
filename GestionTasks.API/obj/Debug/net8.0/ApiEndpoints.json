@@ -122,8 +122,24 @@
   },
   {
     "ContainingType": "GestionTasks.API.Controllers.ProyectoController",
-    "Method": "GetByNombre",
+    "Method": "GetByNombreProyecto",
     "RelativePath": "api/Proyecto/Nombre/{nombre}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionTasks.API.Controllers.ProyectoController",
+    "Method": "GetByNombre",
+    "RelativePath": "api/Proyecto/Nombre1/{nombre}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -314,6 +330,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "GestionTasks.API.Controllers.TareaController",
+    "Method": "GetTareasByProyectoId",
+    "RelativePath": "api/Tarea/proyecto1/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "GestionTasks.API.Controllers.TareaController",
