@@ -1,0 +1,11 @@
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Modelo.Software\obj\Debug\net8.0\Modelo.Software.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Modelo.Software\obj\Debug\net8.0\Modelo.Software.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Modelo.Software\obj\Debug\net8.0\Modelo.Software.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Modelo.Software\obj\Debug\net8.0\Modelo.Software.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Modelo.Software\bin\Debug\net8.0\Modelo.Software.deps.json
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Modelo.Software\bin\Debug\net8.0\Modelo.Software.dll
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Modelo.Software\bin\Debug\net8.0\Modelo.Software.pdb
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Modelo.Software\obj\Debug\net8.0\Modelo.Software.dll
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Modelo.Software\obj\Debug\net8.0\refint\Modelo.Software.dll
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Modelo.Software\obj\Debug\net8.0\Modelo.Software.pdb
+C:\Users\ASUS\Desktop\UTN\Repasos\Repaso2\GestionTasks.API\Modelo.Software\obj\Debug\net8.0\ref\Modelo.Software.dll

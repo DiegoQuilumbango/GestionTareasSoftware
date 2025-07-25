@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|c:\\users\\asus\\desktop\\utn\\repasos\\repaso2\\gestiontasks.api\\gestiontareasweb\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|solutionrelative:gestiontareasweb\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|c:\\users\\asus\\desktop\\utn\\repasos\\repaso2\\gestiontasks.api\\gestiontareasweb\\controllers\\auxilio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|solutionrelative:gestiontareasweb\\controllers\\auxilio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|c:\\users\\asus\\desktop\\utn\\repasos\\repaso2\\gestiontasks.api\\gestiontareasweb\\controllers\\proyectoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|solutionrelative:gestiontareasweb\\controllers\\proyectoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|c:\\users\\asus\\desktop\\utn\\repasos\\repaso2\\gestiontasks.api\\gestiontareasweb\\controllers\\tareascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4CA8F43-7799-4538-90DB-F5413355D1F8}|GestionTareasWeb\\GestionTareasWeb.csproj|solutionrelative:gestiontareasweb\\controllers\\tareascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 225,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "GestionTareasWeb\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "GestionTareasWeb\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwD4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T15:27:04.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProyectosController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\ProyectosController.cs",
+              "RelativeDocumentMoniker": "GestionTareasWeb\\Controllers\\ProyectosController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\ProyectosController.cs",
+              "RelativeToolTip": "GestionTareasWeb\\Controllers\\ProyectosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T15:26:25.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TareasController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\TareasController.cs",
+              "RelativeDocumentMoniker": "GestionTareasWeb\\Controllers\\TareasController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\TareasController.cs",
+              "RelativeToolTip": "GestionTareasWeb\\Controllers\\TareasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T15:25:15.204Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 225,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Auxilio.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\Auxilio.cs",
+              "RelativeDocumentMoniker": "GestionTareasWeb\\Controllers\\Auxilio.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\UTN\\Repasos\\Repaso2\\GestionTasks.API\\GestionTareasWeb\\Controllers\\Auxilio.cs",
+              "RelativeToolTip": "GestionTareasWeb\\Controllers\\Auxilio.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAswIQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T15:27:53.366Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 95,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
