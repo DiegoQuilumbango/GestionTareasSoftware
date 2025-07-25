@@ -7,6 +7,7 @@ using Modelo.Software;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace GestionTareasWeb.Controllers
@@ -42,6 +43,70 @@ namespace GestionTareasWeb.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+
+        // GET: Tareas/TareasPorPrioridad
+        //GET: Tareas/TareasPorPrioridad
+        public async Task<IActionResult> TareasPorPrioridad()
+        {
+            try
+            {
+                var prioridad1 = Crud<Tarea>.GetBy("prioridad", 1).ToList();  // Alta prioridad
+                var prioridad2 = Crud<Tarea>.GetBy("prioridad", 2).ToList();  // Media prioridad
+                var prioridad3 = Crud<Tarea>.GetBy("prioridad", 3).ToList();  // Baja prioridad
+
+                if (!prioridad1.Any() && !prioridad2.Any() && !prioridad3.Any())
+                {
+                    ViewBag.Message = "No se encontraron tareas con las prioridades seleccionadas.";
+                }
+
+                ViewBag.TareasAlta = prioridad1;
+                ViewBag.TareasMedia = prioridad2;
+                ViewBag.TareasBaja = prioridad3;
+
+                return View();
+            }
+            catch (Exception ex)
+            {
+                // Manejar excepciones y mostrar un mensaje adecuado
+                ViewBag.ErrorMessage = "Ocurrió un error al intentar obtener las tareas: " + ex.Message;
+                return View();
+            }
+        }
+
+        // GET: Tareas/TareasPorEstado
+        public async Task<IActionResult> TareasPorEstado()
+        {
+            try
+            {
+                string Estado1 = "Pendiente";
+                string Estado2 = "En Progreso";
+                string Estado3 = "Terminado";
+
+                // Obtener tareas por cada estado
+                var tareasPendiente = Crud<Tarea>.GetBy("Estado", Estado1).ToList();
+                var tareasEnProgreso = Crud<Tarea>.GetBy("Estado", Estado2).ToList();
+                var tareasTerminado = Crud<Tarea>.GetBy("Estado", Estado3).ToList();
+
+                // Verificar si no se encontraron tareas
+                if (!tareasPendiente.Any() && !tareasEnProgreso.Any() && !tareasTerminado.Any())
+                {
+                    ViewBag.Message = "No se encontraron tareas con los estados seleccionados.";
+                }
+
+                // Asignar las tareas a ViewBag
+                ViewBag.TareasPendiente = tareasPendiente;
+                ViewBag.TareasEnProgreso = tareasEnProgreso;
+                ViewBag.TareasTerminado = tareasTerminado;
+
+                return View();
+            }
+            catch (Exception ex)
+            {
+                // Manejar excepciones y mostrar un mensaje adecuado
+                ViewBag.ErrorMessage = "Ocurrió un error al intentar obtener las tareas: " + ex.Message;
+                return View();
+            }
         }
 
         // POST: Usuarios/Create
@@ -115,36 +180,32 @@ namespace GestionTareasWeb.Controllers
             }
         }
 
-        [HttpGet]
-        public IActionResult Reporte(string estado = null, int? prioridad = null, DateTime? fechaVencimiento = null, string ordenarPor = "FechaCreacion", bool ascendente = true)
+        // GET: Tareas/BuscarProyecto
+        public async Task<IActionResult> BuscarTareasPorProyecto(string nombreProyecto)
         {
-            // Crear la consulta base
-            var query = "SELECT * FROM Tarea WHERE 1=1";
-
-            // Agregar filtros según los parámetros proporcionados
-            if (!string.IsNullOrEmpty(estado))
+            if (string.IsNullOrEmpty(nombreProyecto))
             {
-                query += " AND Estado = @Estado";
-            }
-            if (prioridad.HasValue)
-            {
-                query += " AND Prioridad = @Prioridad";
-            }
-            if (fechaVencimiento.HasValue)
-            {
-                query += " AND FechaVencimiento = @FechaVencimiento";
+                ViewBag.Message = "Por favor, ingresa un nombre de proyecto.";
+                return View("Index");
             }
 
-            // Ordenar por el campo seleccionado
-            query += $" ORDER BY {ordenarPor} {(ascendente ? "ASC" : "DESC")}";
+            // Buscar el proyecto por nombre
+            var proyecto = Crud<Modelo.Software.Proyecto>.GetBy("Nombre", nombreProyecto).FirstOrDefault();
 
-            // Ejecutar la consulta
-            var tareas = _connection.Query<Modelo.Software.Tarea>(query, new { Estado = estado, Prioridad = prioridad, FechaVencimiento = fechaVencimiento }).ToList();
+            // Si no se encuentra el proyecto, mostrar mensaje
+            if (proyecto == null)
+            {
+                ViewBag.Message = "No se encontró ningún proyecto con ese nombre.";
+                return View("Index");
+            }
 
-            return View(tareas);
+            // Obtener las tareas asociadas a ese proyecto
+            var tareas = Crud<Modelo.Software.Tarea>.GetBy("proyecto", proyecto.Id);
+
+            // Pasar las tareas a la vista
+            ViewBag.Tareas = tareas;
+
+            return View("ResultadosTareas");
         }
-
-        osea un controlador simple para una vista que va a mostrar tres tablas una conn con cada una de las prioridades
-
     }
 }

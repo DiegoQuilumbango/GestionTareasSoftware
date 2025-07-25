@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Tareas por Estado";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+else if (ViewBag.Message != null)
+{
+    <div class="alert alert-info">
+        @ViewBag.Message
+    </div>
+}
+
+<h2>Pendientes</h2>
+@if (ViewBag.TareasPendiente != null && ViewBag.TareasPendiente.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Fecha de Creación</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarea in ViewBag.TareasPendiente)
+            {
+                <tr>
+                    <td>@tarea.Nombre</td>
+                    <td>@tarea.FechaCreacion.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay tareas pendientes.</p>
+}
+
+<h2>En Progreso</h2>
+@if (ViewBag.TareasEnProgreso != null && ViewBag.TareasEnProgreso.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Fecha de Creación</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarea in ViewBag.TareasEnProgreso)
+            {
+                <tr>
+                    <td>@tarea.Nombre</td>
+                    <td>@tarea.FechaCreacion.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay tareas en progreso.</p>
+}
+
+<h2>Terminadas</h2>
+@if (ViewBag.TareasTerminado != null && ViewBag.TareasTerminado.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Fecha de Creación</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarea in ViewBag.TareasTerminado)
+            {
+                <tr>
+                    <td>@tarea.Nombre</td>
+                    <td>@tarea.FechaCreacion.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay tareas terminadas.</p>
+}

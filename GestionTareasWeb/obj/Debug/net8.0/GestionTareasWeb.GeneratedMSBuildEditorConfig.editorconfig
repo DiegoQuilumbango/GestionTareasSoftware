@@ -92,8 +92,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ASUS/Desktop/UTN/Repasos/Repaso2/GestionTasks.API/GestionTareasWeb/Views/Tareas/Prioridades.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzXFByaW9yaWRhZGVzLmNzaHRtbA==
+[C:/Users/ASUS/Desktop/UTN/Repasos/Repaso2/GestionTasks.API/GestionTareasWeb/Views/Tareas/ResultadosTareas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzXFJlc3VsdGFkb3NUYXJlYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Desktop/UTN/Repasos/Repaso2/GestionTasks.API/GestionTareasWeb/Views/Tareas/TareasPorEstado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzXFRhcmVhc1BvckVzdGFkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/Desktop/UTN/Repasos/Repaso2/GestionTasks.API/GestionTareasWeb/Views/Tareas/TareasPorPrioridad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzXFRhcmVhc1BvclByaW9yaWRhZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ASUS/Desktop/UTN/Repasos/Repaso2/GestionTasks.API/GestionTareasWeb/Views/Usuarios/Create.cshtml]

@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Tareas por Prioridad";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h2>Tareas de Alta Prioridad</h2>
+@if (ViewBag.TareasAlta != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Fecha de Creación</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarea in ViewBag.TareasAlta)
+            {
+                <tr>
+                    <td>@tarea.Nombre</td>
+                    <td>@tarea.Estado</td>
+                    <td>@tarea.FechaCreacion.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay tareas de alta prioridad.</p>
+}
+
+<h2>Tareas de Prioridad Media</h2>
+@if (ViewBag.TareasMedia != null )
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Fecha de Creación</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarea in ViewBag.TareasMedia)
+            {
+                <tr>
+                    <td>@tarea.Nombre</td>
+                    <td>@tarea.Estado</td>
+                    <td>@tarea.FechaCreacion.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay tareas de prioridad media.</p>
+}
+
+<h2>Tareas de Baja Prioridad</h2>
+@if (ViewBag.TareasBaja != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Fecha de Creación</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarea in ViewBag.TareasBaja)
+            {
+                <tr>
+                    <td>@tarea.Nombre</td>
+                    <td>@tarea.Estado</td>
+                    <td>@tarea.FechaCreacion.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay tareas de baja prioridad.</p>
+}

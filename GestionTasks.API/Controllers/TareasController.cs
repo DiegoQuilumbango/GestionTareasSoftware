@@ -66,36 +66,32 @@ namespace GestionTasks.API.Controllers
 
             return tarea;
         }
-
-        [HttpGet("{id}")]
-        public Modelo.Software.Tarea GetPrioridad(int id)
-        {
-            var tarea = connection.QuerySingle<Modelo.Software.Tarea>("SELECT * FROM Tarea WHERE Id = @Id", new { Id = id });
-
-            var proyecto = connection.QuerySingleOrDefault<Modelo.Software.Proyecto>(
-                "SELECT * FROM Proyecto WHERE Id = @Id", new { Id = tarea.ProyectoId });
-
-            var usuario = connection.QuerySingleOrDefault<Modelo.Software.Usuario>(
-                "SELECT * FROM Usuario WHERE Id = @Id", new { Id = tarea.UsuarioId });
-
-            tarea.Proyecto = proyecto;
-            tarea.Usuario = usuario;
-
-            return tarea;
-        }
         // GET: api/TareaApi/{id}
         [HttpGet("prioridad/{prioridad}")]
         public IActionResult GetByPrioridad(int prioridad)
         {
-            var tarea = connection.QuerySingleOrDefault<Tarea>("SELECT * FROM Tarea WHERE prioridad = @prioridad", new { prioridad = prioridad });
-
-            if (tarea == null)
+            var tareas = connection.Query<Tarea>("SELECT * FROM Tarea WHERE prioridad = @prioridad", new { prioridad = prioridad }).ToList();
+            if (tareas.Count == 0)
             {
-                return NotFound();
+                return Ok(new List<Tarea>());
             }
 
-            return Ok(tarea);
+            return Ok(tareas); 
         }
+
+        [HttpGet("estado/{Estado}")]
+        public IActionResult GetByEstado(string Estado)
+        {
+            var tareas = connection.Query<Tarea>("SELECT * FROM Tarea WHERE Estado = @Estado", new { Estado = Estado }).ToList();
+            if (tareas.Count == 0)
+            {
+                return Ok(new List<Tarea>());
+            }
+
+            return Ok(tareas);
+        }
+
+
 
         [HttpGet("proyecto/{id}")]
         public Modelo.Software.Proyecto GetTareasByProyecto(int id)
@@ -111,6 +107,20 @@ namespace GestionTasks.API.Controllers
             proyecto.Tareas = tareas;
 
             return proyecto;
+        }
+
+        [HttpGet("proyectoNombre/{nombreProyecto}")]
+        public IActionResult GetTareasByProyectoName(string nombreProyecto)
+        {
+            var proyecto = connection.QuerySingleOrDefault<Modelo.Software.Proyecto>(
+                "SELECT * FROM Proyecto WHERE Nombre = @nombreProyecto",
+                new { nombreProyecto });
+
+            var tareas = connection.Query<Modelo.Software.Tarea>(
+                "SELECT * FROM Tarea WHERE ProyectoId = @ProyectoId",
+                new { ProyectoId = proyecto.Id }).ToList();
+
+            return Ok(tareas);
         }
 
         // POST api/Tarea

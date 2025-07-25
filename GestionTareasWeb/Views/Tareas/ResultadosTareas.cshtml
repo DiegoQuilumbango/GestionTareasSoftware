@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Tareas del Proyecto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<!-- Mostrar mensaje si no se encuentran tareas -->
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-info">
+        @ViewBag.Message
+    </div>
+}
+else
+{
+    <h3>Tareas asociadas al Proyecto:</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarea in ViewBag.Tareas)
+            {
+                <tr>
+                    <td>@tarea.Nombre</td>
+                    <td>@tarea.Estado</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

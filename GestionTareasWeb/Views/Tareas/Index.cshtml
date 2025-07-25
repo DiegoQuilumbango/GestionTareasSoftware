@@ -9,6 +9,18 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<form class="form-inline" method="get" action="@Url.Action("BuscarTareasPorProyecto", "Tareas")">
+    <input class="form-control" type="text" placeholder="Buscar por nombre de proyecto..." name="nombreProyecto" />
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+</form>
+
+<p>
+    <a asp-action="TareasPorPrioridad">Tareas por Prioridad</a>
+</p>
+<p>
+    <a asp-action="TareasPorEstado">Tareas por Estado</a>
+</p>
 <table class="table">
     <thead>
         <tr>

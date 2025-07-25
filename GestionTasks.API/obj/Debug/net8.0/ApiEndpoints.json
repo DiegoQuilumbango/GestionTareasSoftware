@@ -121,6 +121,22 @@
     ]
   },
   {
+    "ContainingType": "GestionTasks.API.Controllers.ProyectoController",
+    "Method": "GetByNombre",
+    "RelativePath": "api/Proyecto/Nombre/{nombre}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GestionTasks.API.Controllers.TareaController",
     "Method": "Get",
     "RelativePath": "api/Tarea",
@@ -243,6 +259,38 @@
   },
   {
     "ContainingType": "GestionTasks.API.Controllers.TareaController",
+    "Method": "GetByEstado",
+    "RelativePath": "api/Tarea/estado/{Estado}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Estado",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionTasks.API.Controllers.TareaController",
+    "Method": "GetByPrioridad",
+    "RelativePath": "api/Tarea/prioridad/{prioridad}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prioridad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionTasks.API.Controllers.TareaController",
     "Method": "GetTareasByProyecto",
     "RelativePath": "api/Tarea/proyecto/{id}",
     "HttpMethod": "GET",
@@ -266,6 +314,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "GestionTasks.API.Controllers.TareaController",
+    "Method": "GetTareasByProyectoName",
+    "RelativePath": "api/Tarea/proyectoNombre/{nombreProyecto}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombreProyecto",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "GestionTasks.API.Controllers.UsuarioController",

@@ -41,11 +41,30 @@ namespace Client
             }
         }
 
+
+
         public static List<T> GetBy(String campo, int id)
         {
             using (var client = new HttpClient())
             {
                 var response = client.GetAsync($"{EndPoint}/{campo}/{id}").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = response.Content.ReadAsStringAsync().Result;
+                    return JsonConvert.DeserializeObject<List<T>>(json); //aqui solo es una isntancia
+                }
+                else
+                {
+                    throw new Exception($"Error: {response.StatusCode}");
+                }
+            }
+        }
+
+        public static List<T> GetBy(String campo, String termino)
+        {
+            using (var client = new HttpClient())
+            {
+                var response = client.GetAsync($"{EndPoint}/{campo}/{termino}").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     var json = response.Content.ReadAsStringAsync().Result;
